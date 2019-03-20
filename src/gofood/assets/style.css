@@ -1,0 +1,25 @@
+.bg-image{
+    background: url('https://bilba.go-jek.com/dist/img/header/new-hero/desktop/GO-FOOD.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#fff;
+    z-index: 1;
+}
+.bg-image > .overlay{
+    background-image: linear-gradient(90deg,#000,rgba(0,0,0,0.2),rgba(0,0,0,0.0));
+    color:#fff;
+    z-index:-1;
+    position: absolute;
+    top: 9%;
+    right: 0;
+    bottom: 35%;
+    left: 0;
+    z-index: 2;
+}
+.bg-image > .inner{
+    position: relative;
+    z-index: 3;
+}
+.bgRed{
+    background-image: linear-gradient(90deg,#b71c1c,#b71c1c);
+}
