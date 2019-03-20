@@ -14,16 +14,16 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-import Calculator from './calculator/calculator';
-import Get_Data from './components/get';
-import Post_Data from './components/post';
-import Del_Data from './components/del';
-import Edit_Data from './components/edit';
-import Gofood from './gofood/gofood';
-import Navigasi from './components/partials/navbar';
-import GofoodInput from './gofood/components/input';
-import SeeMore from './gofood/components/seemore';
-import GofoodDelete from './gofood/components/delete';
+import Calculator from './calculator/calculator'
+import Get_Data from './components/get'
+import Post_Data from './components/post'
+import Del_Data from './components/del'
+import Edit_Data from './components/edit'
+import Gofood from './gofood/gofood'
+import Navigasi from './components/partials/navbar'
+import GofoodInput from './gofood/components/input'
+import SeeMore from './gofood/components/seemore'
+import GofoodDelete from './gofood/components/delete'
 import Pesan from './gofood/components/pesan'
 
 class View extends Component {
@@ -31,7 +31,6 @@ class View extends Component {
     return (
       <Router>
         <div>
-          
           <Navigasi />
           <Route path='/App' exact component={View} />
           <Route path='/Get_Data/' component={Get_Data} />
