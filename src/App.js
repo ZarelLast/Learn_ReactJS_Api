@@ -24,6 +24,8 @@ import Navigasi from './components/partials/navbar';
 import GofoodInput from './gofood/components/input';
 import SeeMore from './gofood/components/seemore';
 import GofoodDelete from './gofood/components/delete';
+import Pesan from './gofood/components/pesan'
+
 class View extends Component {
   render () {
     return (
@@ -42,6 +44,7 @@ class View extends Component {
           <Route path='/GoFood-Edit' component={GofoodInput} />
           <Route path='/GoFood-Delete' component={GofoodDelete} />
           <Route path='/see-more' component={SeeMore} />
+          <Route path='/pesan/:id' component={Pesan} />
         </div>
       </Router>
     )

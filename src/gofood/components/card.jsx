@@ -8,11 +8,13 @@ import { Container, CardImg, CardDeck } from 'reactstrap'
 import Avatar from '@material-ui/core/Avatar'
 import CardHeader from '@material-ui/core/CardHeader'
 import Typography from '@material-ui/core/Typography'
+import { Link } from 'react-router-dom'
 import red from '@material-ui/core/colors/red'
 
 export default class Cards extends Component {
   state = {
-    array: []
+    array: [],
+    ID : null
   }
   componentDidMount = () => {
     axios
@@ -41,6 +43,7 @@ export default class Cards extends Component {
                     }
                     title={data.title}
                   />
+                  <Link to={`/pesan/${data.id}`}>
                   <CardActionArea>
                     <CardImg height='225px' className='rounded-0' src={data.image} />
                     <CardContent>
@@ -50,6 +53,7 @@ export default class Cards extends Component {
                       <Typography gutterBottom component='p'>{data.about}</Typography>
                     </CardContent>
                   </CardActionArea>
+                  </Link>
                 </Card>
               </Grid>
             ))}
