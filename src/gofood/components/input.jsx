@@ -47,6 +47,9 @@ export default class GofoodInput extends Component {
 
     axios
       .post('https://larapi-react.herokuapp.com/api/gofood', {
+        headers: {
+          'Access-Control-Allow-Origin': 'https://stupefied-colden-26ba04.netlify.com',
+        },
         'title': this.state.title,
         'image': this.state.image,
         'price': this.state.price,
