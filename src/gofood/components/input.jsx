@@ -47,10 +47,10 @@ export default class GofoodInput extends Component {
 
     axios
       .post('https://larapi-react.herokuapp.com/api/gofood', {
-        title: this.state.title,
-        image: this.state.image,
-        price: this.state.price,
-        about: this.state.about
+        'title': this.state.title,
+        'image': this.state.image,
+        'price': this.state.price,
+        'about': this.state.about
       })
       .then(res => {
         console.log(res)
