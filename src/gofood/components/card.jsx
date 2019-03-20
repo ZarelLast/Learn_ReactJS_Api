@@ -16,13 +16,13 @@ export default class Cards extends Component {
   }
   componentDidMount = () => {
     axios
-      .get('https://larapi-react.herokuapp.com/api/gofood')
+      .get('https://larapi-react.herokuapp.com/api/gofood',{ crossdomain: true })
       .then(res => {
         const info = res.data
         this.setState({ array: info })
       })
       .catch(function (error) {
-        console.log(error)
+        alert(error)
       })
   }
   render () {
