@@ -16,7 +16,7 @@ export default class Cards extends Component {
   }
   componentDidMount = () => {
     axios
-      .get('https://larapi-react.herokuapp.com/api/gofood',{ crossdomain: true })
+      .get('https://larapi-react.herokuapp.com/api/gofood')
       .then(res => {
         const info = res.data
         this.setState({ array: info })
