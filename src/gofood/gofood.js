@@ -9,7 +9,7 @@ export default class Gofood extends Component {
   render() {
     return (
       <div>
-          {/* <Navbars /> */}
+          <Navbars />
           <Jumb />
           <Cards />
           <See />

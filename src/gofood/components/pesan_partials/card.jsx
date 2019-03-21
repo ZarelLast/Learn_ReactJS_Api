@@ -37,28 +37,28 @@ export class Kartu2 extends Component {
           <CardHeader title={this.props.title} />
           <Divider variant='fullWidth' />
           <CardContent>
-
+            <Typography>
+              {this.props.text}
+            </Typography>
           </CardContent>
           <Divider variant='fullWidth' />
           <Grid container spacing={32}>
             <Grid item>
-              <Fab color='primary'>
-                <AddIcon onClick={this.props.tambah}/>
+              <Fab color='primary' onClick={this.props.tambah}>
+                <AddIcon />
               </Fab>
             </Grid>
             <Grid item>
-              <Fab color='inherit'>
-                {this.props.angka}
-              </Fab>
+              <Fab color='inherit'>{this.props.angka}</Fab>
             </Grid>
             <Grid item md={6}>
-              <Fab color='secondary'>
-                <RemoveIcon onClick={this.props.kurang}/>
+              <Fab color='secondary' onClick={this.props.kurang}>
+                <RemoveIcon />
               </Fab>
             </Grid>
             <Grid item>
-              <Fab style={{background:green.A700,color:grey[50]}}>
-                <ShoppingCartIcon onClick={this.props.cart}/>
+              <Fab style={{ background: green.A700, color: grey[50] }}>
+                <ShoppingCartIcon onClick={this.props.cart} />
               </Fab>
             </Grid>
           </Grid>

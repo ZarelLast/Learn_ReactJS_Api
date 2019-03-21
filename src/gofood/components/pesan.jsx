@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Container } from 'reactstrap'
-import { Card, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { GridLoader } from 'react-spinners'
 import { Kartu, Kartu2 } from './pesan_partials/card'
+import 'typeface-roboto'
 
 export default class Pesan extends Component {
   state = {
@@ -17,13 +18,15 @@ export default class Pesan extends Component {
   }
   handleTambah = event => {
     event.preventDefault()
-    const increment = 1
-    console.log(increment)
-    // this.setState({increment})
+    var increment = this.state.increment+1
+    this.setState({ increment })
+    console.log(this.state.increment)
   }
-  kurang = event => {
-    const increment = eval(increment - 1)
-    // this.setState({increment})
+  handleKurang = event => {
+    event.preventDefault()
+    var increment = this.state.increment-1
+    this.setState({ increment })
+    console.log(increment)
   }
   componentDidMount = () => {
     axios
@@ -54,13 +57,13 @@ export default class Pesan extends Component {
               <Kartu image={this.state.image} />
             </Grid>
             <Grid item md={7}>
-              <Kartu2
-                title={this.state.title}
-                tambah={this.tambah()} // act
-                kurang={this.kurang()} // act
-                angka={this.state.increment} // ''
-                cart // act
-              />
+              <Kartu2 title={this.state.title}
+                text={this.state.about}
+                tambah={this.handleTambah}
+                angka={this.state.increment}
+                kurang={this.handleKurang}
+                cart={console.log('finish')}
+                />
             </Grid>
           </Grid>
         </Container>

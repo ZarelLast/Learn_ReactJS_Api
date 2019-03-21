@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import Grid from '@material-ui/core/Grid'
+import {Link} from 'react-router-dom'
 import { Container, CardImg } from 'reactstrap'
 import Avatar from '@material-ui/core/Avatar'
 import CardHeader from '@material-ui/core/CardHeader'
@@ -28,7 +29,7 @@ export default class SeeMore extends Component {
   render () {
     return (
       <div>
-        <Container className='my-5'>
+        <Container>
           <Grid container spacing={24}>
             {this.state.array.map(data => (
               <Grid item xs={10} md={4} lg={4}>
@@ -41,25 +42,17 @@ export default class SeeMore extends Component {
                     }
                     title={data.title}
                   />
+                  <Link to={`/pesan/${data.id}`}>
                   <CardActionArea>
-                    <CardImg
-                      height='225px'
-                      className='rounded-0'
-                      src={data.image}
-                    />
+                    <CardImg height='225px' className='rounded-0' src={data.image} />
                     <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant='h5'
-                        style={{ color: red[700] }}
-                      >
+                      <Typography gutterBottom variant='h5' style={{ color: red[700] }} >
                         Rp. {data.price}
                       </Typography>
-                      <Typography gutterBottom component='p'>
-                        {data.about}
-                      </Typography>
+                      <Typography gutterBottom component='p'>{data.about}</Typography>
                     </CardContent>
                   </CardActionArea>
+                  </Link>
                 </Card>
               </Grid>
             ))}

@@ -31,7 +31,9 @@ export default class Navigasi extends Component {
   render () {
     return (
       <Navbar color='light' light expand='md'>
-        <NavbarBrand href='/'>Modul</NavbarBrand>
+        <Link to={'/'}>
+          <NavbarBrand>Modul</NavbarBrand>
+        </Link>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className='ml-auto' navbar>
